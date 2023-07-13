@@ -9,7 +9,7 @@ Objectives:
 
 ## Autoencoder
 
-![alt text](https://https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AAE.png?raw=true)
+![alt text](https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AAE.png?raw=true)
 
 
 ## Evaluation Method
