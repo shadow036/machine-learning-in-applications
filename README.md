@@ -9,12 +9,20 @@ Objectives:
 
 ## Autoencoder
 
-![alt text](https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AAE.png?raw=true)
+![alt text](https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AE.png?raw=true)
 
 
 ## Evaluation Method
 
+![alt text](https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM1.png?raw=true)
+
+![alt text](https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM2.png?raw=true)
+
+
 ## Adversarial Autoencoder
+
+![alt text](https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AAE.png?raw=true)
+
 
 ## References
 1) Kim, S., Choi, K., Choi, H. S., Lee, B., & Yoon, S. (2022, June). Towards a rigorous evaluation of time-series anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 7, pp. 7194-7201).
