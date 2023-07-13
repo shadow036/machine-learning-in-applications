@@ -20,8 +20,6 @@ An autoencoder is a type of artificial neural network used to learn efficient co
 
 Experiment about evaluation methods on TAD in reference paper [1] is repeated in this section.
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM1.png" alt="drawing" width="600" height="250"/>
-
 **Point Adjustment (PA):** 
 
 "If at least one moment in a contiguous anomaly segment is detected as an anomaly, the entire segment is then considered to be correctly predicted as an anomaly. 
@@ -30,7 +28,7 @@ Most of the Time-Series Anomaly Detection (TAD) methods measure the F1 score aft
 
 The allegation: PA greatly overestimates the detection performance.
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM2.png" alt="drawing" width="600" height="250"/>
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM1.png" alt="drawing" width="250" height="500"/>
 
 **Proposed solution PA%K:**
 
@@ -39,6 +37,8 @@ The allegation: PA greatly overestimates the detection performance.
 Mitigate the overestimation effect of F1PA & the possibility of underestimation of F1.
 
 K can be selected manually between 0 and 100 based on prior information. (If test labels are reliable, higher K. And vice versa.)"
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM2.png" alt="drawing" width="600" height="250"/>
 
 
 ## Adversarial Autoencoder
@@ -52,7 +52,21 @@ The same autoencoder has been selected to demonstrate better the differences mad
 
 ## Results
 
+### Random initialized model vs trained model
 
+**Best F1 Scores with different K values:**
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/best.png" alt="drawing" width="600" height="250"/>
+
+**Mean F1 Scores with different K values:**
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/mean.png" alt="drawing" width="600" height="250"/>
+
+to do: write what you see in graphs 
+
+### Traditional vs adversarial learning
+
+to do
 
 ## References
 1) Kim, S., Choi, K., Choi, H. S., Lee, B., & Yoon, S. (2022, June). Towards a rigorous evaluation of time-series anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 7, pp. 7194-7201).
