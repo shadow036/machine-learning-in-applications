@@ -9,7 +9,7 @@ Objectives:
 
 ## Autoencoder
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AE.png" alt="drawing" width="30%" height="30%"/>
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AE.png" alt="drawing" width="5" height="5"/>
 
 
 
