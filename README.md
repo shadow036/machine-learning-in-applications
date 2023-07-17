@@ -28,7 +28,7 @@ Most of the Time-Series Anomaly Detection (TAD) methods measure the F1 score aft
 
 The allegation: PA greatly overestimates the detection performance.
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM1.png" alt="drawing" width="250" height="500"/>
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM1.png" alt="drawing" width="400" height="500"/>
 
 **Proposed solution PA%K:**
 
@@ -56,11 +56,11 @@ The same autoencoder has been selected to demonstrate better the differences mad
 
 **Best F1 Scores with different K values:**
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/best.png" alt="drawing" width="600" height="250"/>
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/best.png" alt="drawing" width="600" height="200"/>
 
 **Mean F1 Scores with different K values:**
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/mean.png" alt="drawing" width="600" height="250"/>
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/mean.png" alt="drawing" width="600" height="200"/>
 
 to do: write what you see in graphs 
 
