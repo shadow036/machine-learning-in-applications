@@ -62,7 +62,13 @@ The same autoencoder has been selected to demonstrate better the differences mad
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/mean.png" alt="drawing" width="600" height="200"/>
 
-to do: write what you see in graphs 
+(Left: trained model, Right: untrained model)
+
+As expected, the PA approach apt to make overestimated evaluation. Best f1-score reaches higher than 0.9 with low K values for untrained model. 
+
+Additionally, it would be worth to mention that best f1-score can be higher than 0.65 for untrained model, even without PA. And best f1-scores are 1 with lower K values than 50 for trained model. Because of that mean f1-score would be better option to make more general and/or honest evaluations.
+
+About K value, the reference paper [1] mentions that K value must be picked manually with consideration of label reliability. K would be between 30 and 50 for mean f1-score evaluation, 60-80 for best f1-score in this case.
 
 ### Traditional vs adversarial learning
 
