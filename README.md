@@ -72,7 +72,10 @@ About K value, the reference paper [1] mentions that K value must be picked manu
 
 ### Traditional vs adversarial learning
 
-to do
+to do (on training)
+
+## Discussion & Future Work
+
 
 ## References
 1) Kim, S., Choi, K., Choi, H. S., Lee, B., & Yoon, S. (2022, June). Towards a rigorous evaluation of time-series anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 7, pp. 7194-7201).
