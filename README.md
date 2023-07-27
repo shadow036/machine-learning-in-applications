@@ -70,9 +70,22 @@ Additionally, it would be worth to mention that best f1-score can be higher than
 
 About K value, the reference paper [1] mentions that K value must be picked manually with consideration of label reliability. K would be between 30 and 50 for mean f1-score evaluation, 60-80 for best f1-score in this case.
 
-### Traditional vs adversarial learning
+### Adversarial Learning
 
-to do (on training)
+
+| Best F1-Scores                                                                                                                               |      Mean F1-Scores |
+|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_best.png" alt="drawing" width="300" height="200"/>  |  <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_mean.png" alt="drawing" width="300" height="200"/>|
+
+
+
+### Distributions of AE & AAE Reconstruction Costs
+
+**Training Set**
+
+**Slow data set**
+
+**Test set (half slow, half normal data)**
 
 ## Discussion & Future Work
 
