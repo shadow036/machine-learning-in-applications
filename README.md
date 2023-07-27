@@ -8,7 +8,23 @@ Objectives:
 * Demonstrate the importance of evaluation method selection in TAD. 
 * Compare traditional training techniques by adversarial training with adversarial autoencoder. Same autoencoder will be used  to demonstrate regularization phase of adversarial learning better.
 
-## Autoencoder
+## Data
+
+**Data Normal:** The data that collected during production with normal velocity.
+
+**Data Slow:** The data that collected during production with slow velocity.
+
+Both normal and slow data has 86 features that from action to sensor values. Permanent anomalies are the anomalies effects production velocity (just in data slow). Temporal anomalies are the anomalies by reading abnormal values from sensor (in both data).
+
+**A selected feature from data:**
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/data.png" alt="drawing" width="600" height="200"/>
+
+(Left: data normal, Right: data slow)
+
+As it can be observable, there are more temporal anomalies in data normal than data slow.
+
+## Autoencoder [3]
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AE.png" alt="drawing" width="600" height="250"/>
 
@@ -16,7 +32,7 @@ An autoencoder is a type of artificial neural network used to learn efficient co
 
 
 
-## Evaluation Method
+## Evaluation Method [1]
 
 Experiment about evaluation methods on TAD in reference paper [1] is repeated in this section.
 
@@ -41,7 +57,7 @@ K can be selected manually between 0 and 100 based on prior information. (If tes
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/EM2.png" alt="drawing" width="600" height="250"/>
 
 
-## Adversarial Autoencoder
+## Adversarial Autoencoder [2]
 
 "The Adversarial Autoencoder (AAE) is a brilliant concept that combines the autoencoder architecture with GAN's adversarial loss notion. It works similarly to the Variational Autoencoder (VAE), except instead of KL-divergence, it utilizes adversarial loss to regularize the latent code.
 "
@@ -49,6 +65,15 @@ K can be selected manually between 0 and 100 based on prior information. (If tes
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/AAE.png" alt="drawing" width="600" height="250"/>
 
 The same autoencoder has been selected to demonstrate better the differences made by adversarial learning. The generator is the encoder of the autoencoder. A fully connected model has been selected with 18,049 trainable-parameters as the discriminator.
+
+
+### Semi-Supervised Autoencoder
+
+In semi-supervised AAE, "There are two separate adversarial networks that regularize the hidden representation of the autoencoder. The first adversarial network imposes a Categorical distribution on the label representation. This adversarial network ensures that the latent class variable y does not carry any style information and that the aggregated posterior distribution of y matches the Categorical distribution. The second adversarial network imposes a Gaussian distribution on the style representation which ensures the latent variable z is a continuous Gaussian variable.".
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_semi.png" alt="drawing" width="600" height="250"/>
+
+In this experiment, only the first adversarial network will be used to have leaning to construct more repetitive samples than scare occurred samples which may be temporal anomalies.
 
 ## Results
 
@@ -77,17 +102,10 @@ About K value, the reference paper [1] mentions that K value must be picked manu
 |----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
 | <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_best.png" alt="drawing" width="300" height="200"/>  |  <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_mean.png" alt="drawing" width="300" height="200"/>|
 
+AAE reached very similar results in comparison with AE.
 
+Note: Both AAE & AE models have been trained for 50 epochs.
 
-### Distributions of AE & AAE Reconstruction Costs
-
-**Training Set**
-
-**Slow data set**
-
-**Test set (half slow, half normal data)**
-
-## Discussion & Future Work
 
 
 ## References
