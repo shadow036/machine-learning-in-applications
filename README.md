@@ -71,7 +71,7 @@ The same autoencoder has been selected to demonstrate better the differences mad
 
 In semi-supervised AAE, "There are two separate adversarial networks that regularize the hidden representation of the autoencoder. The first adversarial network imposes a Categorical distribution on the label representation. This adversarial network ensures that the latent class variable y does not carry any style information and that the aggregated posterior distribution of y matches the Categorical distribution. The second adversarial network imposes a Gaussian distribution on the style representation which ensures the latent variable z is a continuous Gaussian variable.".
 
-<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_semi.png" alt="drawing" width="600" height="250"/>
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae_semi.png" alt="drawing" width="400" height="400"/>
 
 In this experiment, only the first adversarial network will be used to have leaning to construct more repetitive samples than scare occurred samples which may be temporal anomalies.
 
@@ -105,7 +105,6 @@ About K value, the reference paper [1] mentions that K value must be picked manu
 AAE reached very similar results in comparison with AE.
 
 Note: Both AAE & AE models have been trained for 50 epochs.
-
 
 
 ## References
