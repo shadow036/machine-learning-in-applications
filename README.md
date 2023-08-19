@@ -75,6 +75,11 @@ In semi-supervised AAE, "There are two separate adversarial networks that regula
 
 In this experiment, only the first adversarial network will be used to have leaning to construct more repetitive samples than scare occurred samples which may be temporal anomalies.
 
+Training details of adversarial autoencoder:
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae loss.png" alt="drawing" width="300" height="300"/>
+
+
 ## Results
 
 ### Random initialized model vs trained model
@@ -106,8 +111,54 @@ AAE reached very similar results in comparison with AE.
 
 Note: Both AAE & AE models have been trained for 50 epochs.
 
+## Discussion & Further Improvements
+
+### Temporal Anomalies
+
+Autoencoder models often become able to well reconstruct also the anomalies in the data. This phenomenon is more evident when there are anomalies in the training set. In particular when these anomalies are labeled, a setting called semi-supervised, the best way to train autoencoders is to ignore anomalies and minimize the reconstruction error on normal data. And model AE-SAD offers solution for this issue according to it. [4]
+
+As we know, the normal data includes many temporal anomalies (abnormal readings). Therefore, the performance of the model will have been increased, if temporal anomalies could be avoided in training. Because of that, the loss function will be changed as following to avoid or learn less from temporal anomalies. 
+
+| Before (Mean Squared Error)                                                                                                          | After                                                                                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/eq1.png" alt="drawing" width="50" height="20"/> | <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/eq2.png" alt="drawing" width="100" height="20"/> |
+
+However, a preprocessing step is needed to determine temporal anomalies. Therefore, most radical 1% of readings will be labelled as temporal anomaly for each feature. And if any of the feature value is in the 1%, the sample will be labelled as anomaly. 
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/threshold anomalies.png" alt="drawing" width="300" height="300"/>
+
+At the end, estimated 5% of the samples are labelled as temporal anomaly.
+
+
+**Training details of AE-SAD model**
+
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/SAD loss.png" alt="drawing" width="300" height="300"/>
+
+
+### Results of Improvement
+
+
+| Baseline - Mean F1-Scores                                                                                                                               | AE-SAD - Mean F1-Scores                                                                                                                            |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/result baseline mean.png" alt="drawing" width="300" height="300"/> | <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/result SAD mean.png" alt="drawing" width="300" height="300"/> |
+
+As it can be observable, AE-SAD model could perform better than the baseline model. Which means, it can be said that abnormal readings must be taken care of in the training phase.
+
+
+### Mean vs Best F1-Score for Evaluation
+
+An evaluation method should show the difference of performances clearly. However, best F1-Score with point adjustment (PA) would be bad choice for apparency of difference in many K. 
+
+
+| Baseline - Best F1-Scores                                                                                                                               | AE-SAD - Best F1-Scores                                                                                                                            |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/result baseline best.png" alt="drawing" width="300" height="300"/> | <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/result SAD best.png" alt="drawing" width="300" height="300"/> |
+
+As it is obvious, for many K values, especially below 50, it is hard to make an evaluation with PA between models. 
+
 
 ## References
 1) Kim, S., Choi, K., Choi, H. S., Lee, B., & Yoon, S. (2022, June). Towards a rigorous evaluation of time-series anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence (Vol. 36, No. 7, pp. 7194-7201).
 2) Makhzani, A., Shlens, J., Jaitly, N., Goodfellow, I., & Frey, B. (2015). Adversarial autoencoders. arXiv preprint arXiv:1511.05644.
 3) Bank, D., Koenigstein, N., & Giryes, R. (2020). Autoencoders. arXiv preprint arXiv:2003.05991.
+4) Angiulli, F., Fassetti, F., & Ferragina, L. (2023). Reconstruction Error-based Anomaly Detection with Few Outlying Examples. arXiv preprint arXiv:2305.10464.
