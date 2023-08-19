@@ -75,7 +75,7 @@ In semi-supervised AAE, "There are two separate adversarial networks that regula
 
 In this experiment, only the first adversarial network will be used to have leaning to construct more repetitive samples than scare occurred samples which may be temporal anomalies.
 
-Training details of adversarial autoencoder:
+**Training details of adversarial autoencoder:**
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae loss.png" alt="drawing" width="300" height="300"/>
 
@@ -119,9 +119,9 @@ Autoencoder models often become able to well reconstruct also the anomalies in t
 
 As we know, the normal data includes many temporal anomalies (abnormal readings). Therefore, the performance of the model will have been increased, if temporal anomalies could be avoided in training. Because of that, the loss function will be changed as following to avoid or learn less from temporal anomalies. 
 
-| Before (Mean Squared Error)                                                                                                          | After                                                                                                                                 |
-|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/eq1.png" alt="drawing" width="50" height="20"/> | <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/eq2.png" alt="drawing" width="100" height="20"/> |
+| Before (Mean Squared Error)                                                                                                           | After                                                                                                                                 |
+|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/eq1.png" alt="drawing" width="150" height="50"/> | <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/eq2.png" alt="drawing" width="300" height="50"/> |
 
 However, a preprocessing step is needed to determine temporal anomalies. Therefore, most radical 1% of readings will be labelled as temporal anomaly for each feature. And if any of the feature value is in the 1%, the sample will be labelled as anomaly. 
 
