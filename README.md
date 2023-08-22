@@ -1,7 +1,7 @@
 # Machine Learning in Applications Project : Detection of Anomalous Behaviour in Industrial Robot
 
 
-In this project, the capabilities of autoencoders on time-series anomaly detection (TAD) based on reconstruction cost will be studied with all its details.
+In this project, the capabilities of autoencoders on time-series anomaly detection (TAD) based on reconstruction cost will be studied with all its details. Latent size is determined as 10 for all the models to be able to observe the difference between model clearly.
 
 Objectives:
 * Implement an autoencoder model that has capacity to be able to generate same output with input. (Capacity: to have enough trainable parameters to handle reconstruction of time-series.)
@@ -30,7 +30,17 @@ As it can be observable, there are more temporal anomalies in data normal than d
 
 An autoencoder is a type of artificial neural network used to learn efficient codings of unlabelled data. A 5 layer LSTM autoencoder has been selected with latent size 10 and 476,199 trainable parameters. Single LSTM autoencoder is suggested in reference paper [1]. However, more complex model has been chosen because of data complexity. (The learnable parameter would be much more than needed. However, optimizing number of learnable parameters is not a objective of this project.)
 
+**Training details of adversarial autoencoder:**
 
+<img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/ae loss.png" alt="drawing" width="300" height="300"/>
+
+#### Hyperparameters
+
+**Autoencoder learning rate:** $1^{-4}$
+
+**Batch size:** 128
+
+**Number of epoch:** 50
 
 ## Evaluation Method [1]
 
@@ -78,6 +88,18 @@ In this experiment, only the first adversarial network will be used to have lean
 **Training details of adversarial autoencoder:**
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/aae loss.png" alt="drawing" width="300" height="300"/>
+
+#### Hyperparameters
+
+**Autoencoder -> learning rate:** $1^{-4}$, **loss weight:** 1
+
+**Generator -> learning rate:** $1^{-4}$, **loss weight:** 0.2
+
+**Discriminator -> learning rate:** $1^{-5}$, **loss weight:** 0.2
+
+**Batch size:** 1024
+
+**Number of epoch:** 100
 
 
 ## Results
@@ -134,6 +156,15 @@ At the end, estimated 5% of the samples are labelled as temporal anomaly.
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/SAD loss.png" alt="drawing" width="300" height="300"/>
 
+#### Hyperparameters
+
+**Autoencoder learning rate:** $1^{-4}$
+
+**Batch size:** 256
+
+**Number of epoch:** 102
+
+**Lambda of AE-SAD:** 0.1
 
 ### Results of Improvement
 
