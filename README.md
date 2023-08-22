@@ -77,7 +77,7 @@ K can be selected manually between 0 and 100 based on prior information. (If tes
 The same autoencoder has been selected to demonstrate better the differences made by adversarial learning. The generator is the encoder of the autoencoder. A fully connected model has been selected with 18,049 trainable-parameters as the discriminator.
 
 
-### Semi-Supervised Autoencoder
+### Semi-Supervised Adversarial Autoencoder
 
 In semi-supervised AAE, "There are two separate adversarial networks that regularize the hidden representation of the autoencoder. The first adversarial network imposes a Categorical distribution on the label representation. This adversarial network ensures that the latent class variable y does not carry any style information and that the aggregated posterior distribution of y matches the Categorical distribution. The second adversarial network imposes a Gaussian distribution on the style representation which ensures the latent variable z is a continuous Gaussian variable.".
 
