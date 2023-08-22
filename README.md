@@ -30,7 +30,7 @@ As it can be observable, there are more temporal anomalies in data normal than d
 
 An autoencoder is a type of artificial neural network used to learn efficient codings of unlabelled data. A 5 layer LSTM autoencoder has been selected with latent size 10 and 476,199 trainable parameters. Single LSTM autoencoder is suggested in reference paper [1]. However, more complex model has been chosen because of data complexity. (The learnable parameter would be much more than needed. However, optimizing number of learnable parameters is not a objective of this project.)
 
-**Training details of adversarial autoencoder:**
+**Training details of autoencoder:**
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/ae loss.png" alt="drawing" width="300" height="300"/>
 
@@ -152,7 +152,7 @@ However, a preprocessing step is needed to determine temporal anomalies. Therefo
 At the end, estimated 5% of the samples are labelled as temporal anomaly.
 
 
-**Training details of AE-SAD model**
+**Training details of AE-SAD**
 
 <img src="https://github.com/shadow036/machine-learning-in-applications/blob/can/img/SAD loss.png" alt="drawing" width="300" height="300"/>
 
