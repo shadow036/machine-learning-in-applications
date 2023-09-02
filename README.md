@@ -36,7 +36,7 @@ An autoencoder is a type of artificial neural network used to learn efficient co
 
 #### Hyperparameters
 
-**Autoencoder learning rate:** $1^{-4}$
+**Autoencoder learning rate:** $10^{-4}$
 
 **Batch size:** 128
 
@@ -91,11 +91,11 @@ In this experiment, only the first adversarial network will be used to have lean
 
 #### Hyperparameters
 
-**Autoencoder -> learning rate:** $1^{-4}$, **loss weight:** 1
+**Autoencoder -> learning rate:** $10^{-4}$, **loss weight:** 1
 
-**Generator -> learning rate:** $1^{-4}$, **loss weight:** 0.2
+**Generator -> learning rate:** $10^{-4}$, **loss weight:** 0.2
 
-**Discriminator -> learning rate:** $1^{-5}$, **loss weight:** 0.2
+**Discriminator -> learning rate:** $10^{-5}$, **loss weight:** 0.2
 
 **Batch size:** 1024
 
@@ -137,7 +137,7 @@ Note: Both AAE & AE models have been trained for 50 epochs.
 
 ### Temporal Anomalies
 
-Autoencoder models often become able to well reconstruct also the anomalies in the data. This phenomenon is more evident when there are anomalies in the training set. In particular when these anomalies are labeled, a setting called semi-supervised, the best way to train autoencoders is to ignore anomalies and minimize the reconstruction error on normal data. And model AE-SAD offers solution for this issue according to it. [4]
+Autoencoder models often become able to well reconstruct also the anomalies in the data. This phenomenon is more evident when there are anomalies in the training set. In particular when these anomalies are labelled, a setting called semi-supervised, the best way to train autoencoders is to ignore anomalies and minimize the reconstruction error on normal data. And model AE-SAD offers solution for this issue according to it. [4]
 
 As we know, the normal data includes many temporal anomalies (abnormal readings). Therefore, the performance of the model will have been increased, if temporal anomalies could be avoided in training. Because of that, the loss function will be changed as following to avoid or learn less from temporal anomalies. 
 
@@ -158,7 +158,7 @@ At the end, estimated 5% of the samples are labelled as temporal anomaly.
 
 #### Hyperparameters
 
-**Autoencoder learning rate:** $1^{-4}$
+**Autoencoder learning rate:** $10^{-4}$
 
 **Batch size:** 256
 
